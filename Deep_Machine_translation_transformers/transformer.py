@@ -15,7 +15,7 @@ def format_dataset(eng, spa):
     return ({"encoder_inputs": eng, "decoder_inputs": spa[:, :-1],}, spa[:, 1:])
 
 
-def make_dataset(pairs):
+def make_dataset(pairs,batch_size = 64):
     eng_texts, spa_texts = zip(*pairs)
     eng_texts = list(eng_texts)
     spa_texts = list(spa_texts)
